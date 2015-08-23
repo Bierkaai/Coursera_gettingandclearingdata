@@ -8,11 +8,12 @@ Only measurements regarding mean and standard deviation are extracted. Finally, 
 
 ## Requirements to run the analysis
 The following five elements need to be present in order to run the analysis script
-1 The run\_analysis.R script available from this GitHub repository: <https://github.com/Bierkaai/Coursera_gettingandclearingdata>
-2 R
-3 The dplyr package
-4 The reshape2 package
-5 Raw data available from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+
+1. The run\_analysis.R script available from this GitHub repository: <https://github.com/Bierkaai/Coursera_gettingandclearingdata>
+2. R
+3. The dplyr package
+4. The reshape2 package
+5. Raw data available from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
 
 ## Running the analysis script
 Make sure the raw data is in the R working directory and the necessary packages (dplyr and reshape2) are installed.
@@ -33,6 +34,7 @@ The result dataframe contains the following columns:
 The run\_analysis.R script has extensive comments in the code to explain its operation step by step.
 
 In short, the following steps are performed:
+
 1. The features.txt file is loaded to get all column names
 2. grep commands are used to determine column indices for variables containing mean and standard deviation information
 3. A few gsub commands are used to change the column names into more descriptive names and to make them compliant with R. Brackets are removed and dashes are changed to dots.
