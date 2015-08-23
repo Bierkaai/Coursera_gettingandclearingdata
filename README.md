@@ -40,4 +40,12 @@ In short, the following steps are performed:
 3. A few gsub commands are used to change the column names into more descriptive names and to make them compliant with R. Brackets are removed and dashes are changed to dots.
 4. The activity\_labels.txt file is loaded to obtain a mapping between activity id's and activity labels.
 5. To obtain paths to the raw training and testing data, the file.path function is used.
-6. prep.data is called for both the raw training and the raw test data. This fu
+6. prep.data is called for both the raw training and the raw test data. This function performs the following actions on the data:
+  1. Reads in the data x (the measurements)
+  2. Reads in the data y (the activity id's)
+  3. Reads in the subject id's
+  4. Selects only the columns with mean and standard deviation information, the column id's are determined in step 2 of the main file.
+  5. Binds the measurements, activity id's and subject id's columnwise
+  6. Uses a dplyr left join to add the descriptive activity names to the data
+7. After preprocessing both the train and test data, these two data sets are binded row-wise to form one dataset
+8. 

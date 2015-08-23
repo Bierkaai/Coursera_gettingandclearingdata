@@ -23,7 +23,7 @@ colnames <- gsub("Mag", "Magnitude", colnames)
 colnames <- gsub("Acc", "Acceleration", colnames)
 
 # Read activity description labels from text file
-act_labels <- tbl_df(read.csv(file.path(data_folder, "activity_labels.txt"), sep="", col.names=c("ActivityLabel", "Activity"), header=FALSE))
+act_labels <- tbl_df(read.csv(file.path(data_folder, "activity_labels.txt"), sep="", col.names=c("ActivityId", "Activity"), header=FALSE))
 
 # Calculate file paths for all data files in subfolders
 x_train_file <- file.path(data_folder, "train", "X_train.txt")
