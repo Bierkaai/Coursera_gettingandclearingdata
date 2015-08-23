@@ -18,7 +18,7 @@ The following five elements need to be present in order to run the analysis scri
 ## Running the analysis script
 Make sure the raw data is in the R working directory and the necessary packages (dplyr and reshape2) are installed.
 Source the auxiliary function prep.data (from the prep.data.R file) in R.
-Analysis can now be perfomed by running run_analysis.R with the raw data (unzipped) in the R working directory.
+Analysis can now be performed by running run_analysis.R with the raw data (unzipped) in the R working directory.
 Alternatively, data can be stored in another folder, which can be set in the first line of the R script (instead of the dot denoting the current WD).
 
 ## Code book for processed data
@@ -47,7 +47,7 @@ First the data is preprocessed into a tidy data set.
   2. Reads in the data y (the activity id's)
   3. Reads in the subject id's
   4. Selects only the columns with mean and standard deviation information, the column id's are determined in step 2 of the main file.
-  5. Binds the measurements, activity id's and subject id's columnwise
+  5. Bind the measurements, activity id's and subject id's column wise
   6. Uses a dplyr left join to add the descriptive activity names to the data
 7. After preprocessing both the train and test data, these two data sets are binded row-wise to form one dataset
 
