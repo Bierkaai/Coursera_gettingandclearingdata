@@ -75,4 +75,6 @@ These variables are extracted from the raw data set. See the original data code 
 - "ActivityLabel"
 
 ## Performed transformations
-From the 
+From the raw data, the aforementioned columns are selected and information about the performed activities is added. 
+See the README.md file for details about the operation of the script.
+For every aforementioned variable, except the subject id, activity id, and the activity label, mean values are computed per subject and per activity.
