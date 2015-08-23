@@ -42,7 +42,7 @@ data <- rbind(train, test)
 # Free up some memory by removing the raw data frames
 rm(train, test)
 
-# Determine indices of measuremnet columns (everything except for subjectID, activityLabel and Activity)
+# Determine indices of measuremnet columns (everything except for subjectID, activityId and Activity)
 var_columns <- 1:(length(names(data)) - 3)
 
 # Melt data set to distribute activity names, measurements and subject id's over all rows
@@ -52,7 +52,7 @@ melted <- tbl_df(melt(data, id=c("SubjectId", "Activity"), measure.vars=var_colu
 grouped <- group_by(melted, SubjectId, Activity, variable)
 
 # Calculate means over grouped indices and give pretty names to the columns
-result <- summarise(grouped, mean=mean(value))
-result <- mutate(result, Measurement=variable, Mean=mean) %>% select(SubjectId, Activity, Measurement, Mean)
+result <- summarise(grouped, Mean=mean(value))
+result <- mutate(result, Measurement=variable) %>% select(SubjectId, Activity, Measurement, Mean)
 
 

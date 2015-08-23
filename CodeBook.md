@@ -80,3 +80,11 @@ See the README.md file for details about the operation of the script.
 For every aforementioned variable, except the subject id, activity id, and the activity label, mean values are computed per subject and per activity.
 
 The result is a nice and clean data set according to the clean data standards and the requirements set for this project.
+
+## Clean set columns
+The clean set contains four columns:
+
+1. SubjectId: Identifier for the test subject performing the activity
+2. Activity: Descriptive name of the activity performed
+3. Measurement: the measured variable. One of the aforementioned variable names
+4. Mean: mean value for the measurement for this activity and this subject, mean is calculated over the entire dataset.
